@@ -1,0 +1,15 @@
+actionid: pytest
+msg: installpkg
+cmdargs: ['/home/julian/so-exam3/.tox/pytest/bin/pip', 'install', '-U', '--no-deps', '/home/julian/so-exam3/.tox/dist/op_stats-0.1.0.zip']
+
+Processing ./.tox/dist/op_stats-0.1.0.zip
+Building wheels for collected packages: op-stats
+  Running setup.py bdist_wheel for op-stats: started
+  Running setup.py bdist_wheel for op-stats: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/3b/77/2e/6bd19406956e2f3cd86f26420bd8c69a9956bef425eb8b2e96
+Successfully built op-stats
+Installing collected packages: op-stats
+  Found existing installation: op-stats 0.1.0
+    Uninstalling op-stats-0.1.0:
+      Successfully uninstalled op-stats-0.1.0
+Successfully installed op-stats-0.1.0

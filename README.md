@@ -139,7 +139,7 @@ language: python
 notifications:  
   email: false  
 python:  
-- '3.4'  
+-'3.4'  
 install: pip install tox-travis  
 script: tox -e pytest    
 

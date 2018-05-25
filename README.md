@@ -5,6 +5,7 @@
 **Código:** A00328080  
 **Correo:** juliannino01@hotmail.com  
 **Correo Universitario:** julian.nino@correo.icesi.edu.co  
+**URL Repositorio:** https://github.com/julianNinoo/so-exam3  
 
 # PUNTO 3
 # Se debe implementar un servicio Web en flask con lo visto en clase 

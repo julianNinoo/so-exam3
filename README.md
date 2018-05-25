@@ -38,15 +38,15 @@ class Stats():
 # En app.py se encuentra:  
 
 
-from flask import Flask
-import json
-import sys
-sys.path.append('/home/julian/so-exam3')
-from op_stats.stats import Stats
+from flask import Flask  
+import json  
+import sys  
+sys.path.append('/home/julian/so-exam3')  
+from op_stats.stats import Stats  
 
-app = Flask(__name__)
+app = Flask(__name__)  
 
-@app.route('/v1/stats/cpu')  
+@app.route('/v1/stats/cpu')   
 def informacion_cpu():  
     info_cpu = Stats.dar_cpu()  
     return json.dumps({'CPU(%)': info_cpu})  
@@ -82,65 +82,67 @@ if __name__ == '__main__':
   
   # En test_stats.py  
   
-  import pytest
-import sys
-sys.path.append('/home/julian/so-exam3')
+  import pytest  
+import sys 
+sys.path.append('/home/julian/so-exam3')  
 
-from op_stats.app import app
-from op_stats.stats import Stats
+from op_stats.app import app  
+from op_stats.stats import Stats  
 
-@pytest.fixture
-def client():
-  client = app.test_client()
-  return client
+@pytest.fixture  
+def client():  
+  client = app.test_client()  
+  return client  
 
-def test_get_cpu_percent(mocker, client):
-  mocker.patch.object(Stats, 'dar_cpu', return_value=1)
-  response = client.get('/v1/stats/cpu')
-  assert response.data.decode('utf-8') == '{"CPU(%)": 1}'
-  assert response.status_code == 200
+def test_get_cpu_percent(mocker, client):  
+  mocker.patch.object(Stats, 'dar_cpu', return_value=1)  
+  response = client.get('/v1/stats/cpu')  
+  assert response.data.decode('utf-8') == '{"CPU(%)": 1}'  
+  assert response.status_code == 200  
 
-def test_get_available_memory(mocker, client):
-  mocker.patch.object(Stats, 'dar_memoria', return_value=2)
-  response = client.get('/v1/stats/memory')
-  assert response.data.decode('utf-8') == '{"Memoria_Disponible": 2}'
-  assert response.status_code == 200
+def test_get_available_memory(mocker, client):  
+  mocker.patch.object(Stats, 'dar_memoria', return_value=2)  
+  response = client.get('/v1/stats/memory')  
+  assert response.data.decode('utf-8') == '{"Memoria_Disponible": 2}'  
+  assert response.status_code == 200  
 
 
-def test_get_disk_space(mocker, client):
-  mocker.patch.object(Stats, 'dar_espacio', return_value=3)
-  response = client.get('/v1/stats/disk')
-  assert response.data.decode('utf-8') == '{"Espacio_Disco": 3}'
-  assert response.status_code == 200
+def test_get_disk_space(mocker, client):  
+  mocker.patch.object(Stats, 'dar_espacio', return_value=3)  
+  response = client.get('/v1/stats/disk')  
+  assert response.data.decode('utf-8') == '{"Espacio_Disco": 3}'  
+  assert response.status_code == 200  
+
 
 - Se ejecuta el siguiente comando:  
 ![](Imagenes/captura5.png) 
 
 # PUNTO 5  
-# Se emplea un servicio de integración que use las pruebas uniatrias.  
+# Se emplea un servicio de integración que use las pruebas unitarias.  
 -Se crea el archivo tox.ini  
-[tox]
-envlist = pytest 
+[tox]  
+envlist = pytest  
 
-[testenv]
-basepython = python3
+[testenv]  
+basepython = python3  
 
-[testenv:pytest]
-deps =
-  -rrequirements_dev.txt
-commands =
-  pytest
+[testenv:pytest]  
+deps =  
+  -rrequirements_dev.txt  
+commands =  
+  pytest  
   ![](Imagenes/captura6.png) 
   -En el archivo .travis.yml está 
   
-  sudo: false
-language: python
-notifications:
-  email: false
-python:
-- '3.4'
-install: pip install tox-travis
-script: tox -e pytest  
+  sudo: false  
+language: python  
+notifications:  
+  email: false  
+python:  
+- '3.4'  
+install: pip install tox-travis  
+script: tox -e pytest    
+
 
 
   

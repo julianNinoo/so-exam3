@@ -76,7 +76,7 @@ if __name__ == '__main__':
  
   ![](Imagenes/captura4.png)  
   
-  # Punto 4
+  # PUNTO 4
   # Se implementa las pruebas unitarias con Fixtures  
   -En la carpeta tests está el archivo test_stats.py   
   
@@ -116,5 +116,19 @@ def test_get_disk_space(mocker, client):
 - Se ejecuta el siguiente comando:  
 ![](Imagenes/captura5.png) 
 
-# Punto 5 se emplea un servicio de integración que use las pruebas uniatrias.  
--Se crea el archivo tox.ini
+# PUNTO 5  
+# Se emplea un servicio de integración que use las pruebas uniatrias.  
+-Se crea el archivo tox.ini  
+[tox]
+envlist = pytest 
+
+[testenv]
+basepython = python3
+
+[testenv:pytest]
+deps =
+  -rrequirements_dev.txt
+commands =
+  pytest
+  ![](Imagenes/captura6.png) 
+  -En el archivo .travis.yml está

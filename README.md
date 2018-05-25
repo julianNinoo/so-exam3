@@ -29,7 +29,7 @@ class Stats():
     ram_available = psutil.virtual_memory().available  
     return ram_available  
 
-  @classmethod 
+  @classmethod   
   def dar_espacio(cls):  
     free_disk = psutil.disk_usage('/').free  
     return free_disk  
@@ -45,7 +45,7 @@ from op_stats.stats import Stats
 
 app = Flask(__name__)
 
-@app.route('/v1/stats/cpu')
+@app.route('/v1/stats/cpu')  
 def informacion_cpu():  
     info_cpu = Stats.dar_cpu()  
     return json.dumps({'CPU(%)': info_cpu})  

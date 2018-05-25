@@ -131,4 +131,16 @@ deps =
 commands =
   pytest
   ![](Imagenes/captura6.png) 
-  -En el archivo .travis.yml está
+  -En el archivo .travis.yml está 
+  
+  sudo: false
+language: python
+notifications:
+  email: false
+python:
+- '3.4'
+install: pip install tox-travis
+script: tox -e pytest  
+
+
+  

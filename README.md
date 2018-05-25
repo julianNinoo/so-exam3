@@ -6,6 +6,7 @@
 **Correo:** juliannino01@hotmail.com  
 **Correo Universitario:** julian.nino@correo.icesi.edu.co  
 
+# PUNTO 3
 # Se debe implementar un servicio Web en flask con lo visto en clase 
 - Cree un ambiente llamado julian  
 
@@ -74,4 +75,10 @@ if __name__ == '__main__':
  ![](Imagenes/captura3.png)  
  
   ![](Imagenes/captura4.png)  
+  
+  # Punto 4
+  # Se implementa las pruebas unitarias con Fixtures  
+  -En la carpeta tests hay dos archivos : test_stats.py y tox.ini  
+  
+  # En test_stats.py  
   

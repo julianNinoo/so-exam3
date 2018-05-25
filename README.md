@@ -142,6 +142,8 @@ python:
 -'3.4'  
 install: pip install tox-travis  
 script: tox -e pytest    
+![](Imagenes/captura8.png) 
+![](Imagenes/captura7.png) 
 
 
 

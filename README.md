@@ -5,13 +5,13 @@
 **Código:** A00328080  
 **Correo:** juliannino01@hotmail.com  
 **Correo Universitario:** julian.nino@correo.icesi.edu.co  
-**URL Repositorio:** https://github.com/julianNinoo/so-exam3  
+**URL del Repositorio:** https://github.com/julianNinoo/so-exam3  
 
 # PUNTO 3
 # Se debe implementar un servicio Web en flask con lo visto en clase 
 - Cree un ambiente llamado julian  
 
--En este ambiente hay unas dependencias llamdas : requirements_dev.txt y requirements.txt, tambien 3 carpetas llamadas op_stats,
+-En este ambiente hay unas dependencias llamadas : requirements_dev.txt y requirements.txt, tambien 3 carpetas llamadas op_stats,
 scripts y tests  
 
 -En la carpeta llamada op_stats se encuentran dos archivos:  

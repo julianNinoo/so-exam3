@@ -19,12 +19,12 @@ import psutil
 
 class Stats():
 
-  @classmethod
-  def dar_cpu(cls):
-    percent = psutil.cpu_percent()
+  @classmethod  
+  def dar_cpu(cls):  
+    percent = psutil.cpu_percent()  
     return percent
 
-  @classmethod
+  @classmethod  
   def dar_memoria(cls):  
     ram_available = psutil.virtual_memory().available  
     return ram_available  

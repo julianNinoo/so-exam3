@@ -64,4 +64,12 @@ def informacion_disco():
 
 if __name__ == '__main__':  
     app.run(host='0.0.0.0',port=8080)  
-   
+    
+-Se ejecutó  el comando python op_stats/app.py y se hacen las pruebas con postman   
+
+![](Imagenes/captura1.PNG)  
+ 
+ ![](Imagenes/captura2.PNG)  
+ 
+ ![](Imagenes/captura3.PNG)     
+ 
